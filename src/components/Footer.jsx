@@ -44,9 +44,9 @@ const Footer = () => {
         <div>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Contact Us</h4>
           <div style={{ lineHeight: '2' }}>
-            <p><FaMapMarkerAlt style={{ marginRight: '0.5rem' }} />123 Luxury Avenue</p>
-            <p><FaPhone style={{ marginRight: '0.5rem' }} />+1 (555) 123-4567</p>
-            <p><FaEnvelope style={{ marginRight: '0.5rem' }} />info@luxehaven.com</p>
+            <p><FaMapMarkerAlt style={{ marginRight: '0.5rem' }} />5 Benmore Rd, Benmore Gardens, Sandton, 2196</p>
+            <p><FaPhone style={{ marginRight: '0.5rem' }} />+27 (71) 568-6151</p>
+            <p><FaEnvelope style={{ marginRight: '0.5rem' }} />info@lebelmor.com</p>
           </div>
         </div>
 
