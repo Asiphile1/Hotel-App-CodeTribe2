@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -32,18 +33,18 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          listStyleType: 'none', 
-          gap: '20px', 
-          margin: 0, 
-          padding: 0 
-        }}>
-          <li><a href="/" style={{ color: '#F3E0DC', textDecoration: 'none' }}>Home</a></li>
-          <li><a href="/about" style={{ color: '#F3E0DC', textDecoration: 'none' }}>About</a></li>
-          <li><a href="/rooms" style={{ color: '#F3E0DC', textDecoration: 'none' }}>Rooms</a></li>
-          <li><a href="/contact" style={{ color: '#F3E0DC', textDecoration: 'none' }}>Contact</a></li>
-        </ul>
+  display: 'flex', 
+  justifyContent: 'center', 
+  listStyleType: 'none', 
+  gap: '20px', 
+  margin: 0, 
+  padding: 0 
+}}>
+  <li><Link to="/" style={{ color: '#F3E0DC', textDecoration: 'none' }}>Home</Link></li>
+  <li><Link to="/about" style={{ color: '#F3E0DC', textDecoration: 'none' }}>About</Link></li>
+  <li><Link to="/rooms" style={{ color: '#F3E0DC', textDecoration: 'none' }}>Rooms</Link></li>
+  <li><Link to="/contact" style={{ color: '#F3E0DC', textDecoration: 'none' }}>Contact</Link></li>
+</ul>
 
         {/* User Icon and Sign In */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
