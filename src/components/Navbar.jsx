@@ -1,9 +1,20 @@
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate('/login');
+  };
+
   return (
-    <nav style={{ backgroundColor: '#5C2018', color: '#F3E0DC', padding: '1rem 2rem' }}>
+    <nav style={{ 
+      backgroundColor: '#5C2018', 
+      color: '#F3E0DC', 
+      padding: '1rem 2rem' 
+    }}>
       <div 
         className="navbar" 
         style={{
@@ -13,7 +24,11 @@ const Navbar = () => {
         }}
       >
         {/* Logo */}
-        <img src="/logo.png" alt="Hotel Logo" style={{ height: '80px' }} />
+        <img 
+          src="/logo.png" 
+          alt="Hotel Logo" 
+          style={{ height: '80px' }} 
+        />
 
         {/* Nav Links */}
         <ul style={{ 
@@ -33,14 +48,17 @@ const Navbar = () => {
         {/* User Icon and Sign In */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <FaUserCircle size={28} style={{ color: '#BC4639' }} />
-          <button style={{ 
-            backgroundColor: '#BC4639', 
-            color: '#F3E0DC', 
-            borderRadius: '5px', 
-            padding: '6px 12px', 
-            border: 'none', 
-            cursor: 'pointer'
-          }}>
+          <button 
+            onClick={handleSignIn} 
+            style={{
+              backgroundColor: '#BC4639', 
+              color: '#F3E0DC', 
+              borderRadius: '5px', 
+              padding: '6px 12px', 
+              border: 'none', 
+              cursor: 'pointer'
+            }}
+          >
             Sign In
           </button>
         </div>
