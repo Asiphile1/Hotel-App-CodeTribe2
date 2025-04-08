@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -24,21 +25,21 @@ const Footer = () => {
             gap: '0.5rem'
           }}>
             <FaMapMarkerAlt /> Location
-            </h4>
-  <iframe
-    title="Hotel Location"
-    src="https://www.google.com/maps?q=-26.101589794629312,28.059926486569537&z=15&output=embed"
-    style={{
-      width: '100%',
-      height: '200px',
-      border: 'none',
-      borderRadius: '8px'
-    }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
+          </h4>
+          <iframe
+            title="Hotel Location"
+            src="https://www.google.com/maps?q=-26.101589794629312,28.059926486569537&z=15&output=embed"
+            style={{
+              width: '100%',
+              height: '200px',
+              border: 'none',
+              borderRadius: '8px'
+            }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
 
         {/* Contact Column */}
         <div>
@@ -54,15 +55,19 @@ const Footer = () => {
         <div>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Quick Links</h4>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            {['Home', 'About', 'Rooms', 'Contact'].map(link => (
-              <li key={link} style={{ marginBottom: '0.5rem' }}>
-                <a href={`#${link}`} style={{
+            {[
+              { name: 'Home', path: '/' },
+              { name: 'About', path: '/about' },
+              { name: 'Rooms', path: '/rooms' },
+              { name: 'Contact', path: '/contact' }
+            ].map(link => (
+              <li key={link.name} style={{ marginBottom: '0.5rem' }}>
+                <Link to={link.path} style={{
                   color: '#F3E0DC',
-                  textDecoration: 'none',
-                  '&:hover': { color: '#BC4639' }
+                  textDecoration: 'none'
                 }}>
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -72,9 +77,15 @@ const Footer = () => {
         <div>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Follow Us</h4>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <FaInstagram size={24} style={{ cursor: 'pointer' }} />
-            <FaFacebook size={24} style={{ cursor: 'pointer' }} />
-            <FaTwitter size={24} style={{ cursor: 'pointer' }} />
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} style={{ cursor: 'pointer', color: '#F3E0DC' }} />
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={24} style={{ cursor: 'pointer', color: '#F3E0DC' }} />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter size={24} style={{ cursor: 'pointer', color: '#F3E0DC' }} />
+            </a>
           </div>
         </div>
       </div>
@@ -84,7 +95,7 @@ const Footer = () => {
         paddingTop: '2rem',
         borderTop: '1px solid #BC4639'
       }}>
-        <p>© 2025 Luxe Haven Hotel. All rights reserved.</p>
+        <p>© 2024 Hotel Le' Bel Mor. All rights reserved.</p>
       </div>
     </footer>
   );
