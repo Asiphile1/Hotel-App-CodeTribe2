@@ -3,9 +3,9 @@ import { FaHeart } from 'react-icons/fa';
 
 const RoomsSection = () => {
   const rooms = [
-    { id: 1, name: 'Executive Suite', price: 450 },
-    { id: 2, name: 'Presidential Suite', price: 750 },
-    { id: 3, name: 'Royal Penthouse', price: 1200 }
+    { id: 1, name: 'Executive Suite', price: 1450, image: '/room 1.webp' },
+    { id: 2, name: 'Presidential Suite', price: 2750, image: '/room5.png' },
+    { id: 3, name: 'Royal Penthouse', price: 3200, image: '/room9.jpg' }
   ];
 
   return (
@@ -34,7 +34,7 @@ const RoomsSection = () => {
             boxShadow: '0 8px 16px rgba(92, 32, 24, 0.2)'
           }}>
             <img
-              src={`/room9.jpg`}
+              src={room.image}
               alt={room.name}
               style={{
                 width: '100%',
@@ -55,7 +55,6 @@ const RoomsSection = () => {
                 marginBottom: '1rem'
               }}>
                 R{room.price}/night
-                
               </p>
               <div style={{
                 display: 'flex',
