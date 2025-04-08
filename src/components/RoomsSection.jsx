@@ -54,7 +54,8 @@ const RoomsSection = () => {
                 fontSize: '1.2rem',
                 marginBottom: '1rem'
               }}>
-                ${room.price}/night
+                R{room.price}/night
+                
               </p>
               <div style={{
                 display: 'flex',
