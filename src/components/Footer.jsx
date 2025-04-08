@@ -24,18 +24,21 @@ const Footer = () => {
             gap: '0.5rem'
           }}>
             <FaMapMarkerAlt /> Location
-          </h4>
-          <iframe
-            title="Hotel Location"
-            src="https://www.google.com/maps/embed"
-            style={{
-              width: '100%',
-              height: '200px',
-              border: 'none',
-              borderRadius: '8px'
-            }}
-          />
-        </div>
+            </h4>
+  <iframe
+    title="Hotel Location"
+    src="https://www.google.com/maps?q=-26.101589794629312,28.059926486569537&z=15&output=embed"
+    style={{
+      width: '100%',
+      height: '200px',
+      border: 'none',
+      borderRadius: '8px'
+    }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
 
         {/* Contact Column */}
         <div>
